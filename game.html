@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Game</title>
+        <style>
+            html, body {
+                background-color: #303030;
+                position: relative;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .game {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .game div{
+                background-color: darkkhaki;
+                border: solid 3px black;
+                width: 100px;
+                height: 100px;
+            }
+            #d1, #d2, #d3 {
+                border-top-width: 0;
+                padding-top: 3px;
+            }
+            #d1, #d4, #d7 {
+                border-left-width: 0;
+                padding-left: 3px;
+            }
+            #d3, #d6, #d9 {
+                border-right-width: 0;
+                padding-right: 3px;
+            }
+            #d7, #d8, #d9 {
+                border-bottom-width: 0;
+                padding-bottom: 3px;
+            }
+            #msg {
+                position: absolute;
+                bottom: 15%;
+                margin: 0 auto 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            p {
+                color: silver;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!--  JOGO DA VELHA -->
+        <div class="game">
+            <div id="d1" onclick="jogada('d1')"></div>
+            <div id="d2" onclick="jogada('d2')"></div>
+            <div id="d3" onclick="jogada('d3')"></div>
+            <div id="d4" onclick="jogada('d4')"></div>
+            <div id="d5" onclick="jogada('d5')"></div>
+            <div id="d6" onclick="jogada('d6')"></div>
+            <div id="d7" onclick="jogada('d7')"></div>
+            <div id="d8" onclick="jogada('d8')"></div>
+            <div id="d9" onclick="jogada('d9')"></div>
+        </div><br /><br />
+        <div id="msg"></div>
+        <script src="file.js" async></script>
+    </body>
+</html>
