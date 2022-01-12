@@ -46,10 +46,12 @@ function jogada(ident) {
     if (conta % 2 === 0) {
         quadros[n][`j`] = 2;
         campo.innerHTML = imgPar;
+        campo.removeAttribute('onclick');
     }
     else {
         quadros[n][`j`] = 1;
         campo.innerHTML = imgImpar;
+        campo.removeAttribute('onclick');
     }
     verCasas(conta);
 }
